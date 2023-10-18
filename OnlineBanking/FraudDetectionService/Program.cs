@@ -1,4 +1,5 @@
 using FraudDetectionService;
+using FraudDetectionService.MQ;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,7 +11,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<FraudDetectionServiceDbContext>(x => x.UseSqlServer(builder.Configuration.GetConnectionString("FruadDetectionServiceDB")));
-
+builder.Services.AddScoped<IRabitMQProducer, RabitMQProducer>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
