@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using AuditService.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace AuditService
 {
@@ -6,5 +7,6 @@ namespace AuditService
     {
         public AuditServiceDbContext(DbContextOptions<AuditServiceDbContext> options) : base(options) { }
 
+        public DbSet<Audit> Audits { get; set; }
     }
 }

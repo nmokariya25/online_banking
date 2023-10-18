@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using AccountManagementService.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace AccountManagementService
 {
@@ -6,5 +7,8 @@ namespace AccountManagementService
     {
         public AccountManagementServiceDbContext(DbContextOptions<AccountManagementServiceDbContext> options) : base(options) { }
 
+        public DbSet<Account> Accounts { get; set; }
+
+        public DbSet<AccountBalance> AccountBalances { get; set; }
     }
 }

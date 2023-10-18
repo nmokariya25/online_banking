@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using TransactionService.Models;
 
 namespace TransactionService
 {
@@ -6,5 +7,6 @@ namespace TransactionService
     {
         public TransactionServiceDbContext(DbContextOptions<TransactionServiceDbContext> options) : base(options) { }
 
+        public DbSet<Transaction> Transactions { get; set; }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using NotificationService.Models;
 
 namespace NotificationService
 {
@@ -6,5 +7,6 @@ namespace NotificationService
     {
         public NotificationServiceDbContext(DbContextOptions<NotificationServiceDbContext> options) : base(options) { }
 
+        public DbSet<Notification> Notifications { get; set; }
     }
 }
