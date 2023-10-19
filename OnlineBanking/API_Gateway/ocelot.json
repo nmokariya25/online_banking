@@ -1,68 +1,105 @@
 {
   "Routes": [
     {
-      "UseServiceDiscovery": true,
-      "UpstreamPathTemplate": "/gateway/demands",
-      "UpstreamHttpMethod": [ "Get" ],
-      "DownstreamPathTemplate": "/demands",
+      "DownstreamPathTemplate": "/createAccount",
       "DownstreamScheme": "http",
-      "LoadBalancerOptions": {
-        "Type": "LeastConnection"
-      },
+      "DownstreamHttpMethod": "POST",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 5282
+          "Port": 5110
         }
-      ]
+      ],
+      "UpstreamPathTemplate": "/gateway/createAccount",
+      "UpstreamHttpMethod": [ "GET", "POST" ],
+      "UseServiceDiscovery": true
     },
     {
-      "UseServiceDiscovery": true,
-      "UpstreamPathTemplate": "/gateway/demands/{Id}",
-      "UpstreamHttpMethod": [ "Get" ],
-      "DownstreamPathTemplate": "/demands/{Id}",
+      "DownstreamPathTemplate": "/debit",
       "DownstreamScheme": "http",
-      "LoadBalancerOptions": {
-        "Type": "LeastConnection"
-      },
+      "DownstreamHttpMethod": "POST",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 5282
+          "Port": 5110
         }
-      ]
+      ],
+      "UpstreamPathTemplate": "/gateway/debit",
+      "UpstreamHttpMethod": [ "GET", "POST" ],
+      "UseServiceDiscovery": true
     },
     {
-      "UseServiceDiscovery": true,
-      "UpstreamPathTemplate": "/gateway/materials",
-      "UpstreamHttpMethod": [ "Get" ],
-      "DownstreamPathTemplate": "/materials",
+      "DownstreamPathTemplate": "/credit",
       "DownstreamScheme": "http",
-      "LoadBalancerOptions": {
-        "Type": "LeastConnection"
-      },
+      "DownstreamHttpMethod": "POST",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 5233
+          "Port": 5110
         }
-      ]
+      ],
+      "UpstreamPathTemplate": "/gateway/credit",
+      "UpstreamHttpMethod": [ "GET", "POST" ],
+      "UseServiceDiscovery": true
     },
     {
-      "UseServiceDiscovery": true,
-      "UpstreamPathTemplate": "/gateway/materials/{itemName}",
-      "UpstreamHttpMethod": [ "Get" ],
-      "DownstreamPathTemplate": "/materials/{itemName}",
+      "DownstreamPathTemplate": "/logActivity",
       "DownstreamScheme": "http",
-      "LoadBalancerOptions": {
-        "Type": "LeastConnection"
-      },
+      "DownstreamHttpMethod": "POST",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 5233
+          "Port": 5047
         }
-      ]
+      ],
+      "UpstreamPathTemplate": "/gateway/logActivity",
+      "UpstreamHttpMethod": [ "GET", "POST" ],
+      "UseServiceDiscovery": true
+    },
+    {
+      "DownstreamPathTemplate": "/analyzeTransaction",
+      "DownstreamScheme": "http",
+      "DownstreamHttpMethod": "POST",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5138
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/analyzeTransaction",
+      "UpstreamHttpMethod": [ "GET", "POST" ],
+      "UseServiceDiscovery": true
+    },
+    {
+      "DownstreamPathTemplate": "/initiateTransaction",
+      "DownstreamScheme": "http",
+      "DownstreamHttpMethod": "POST",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5071
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/initiateTransaction",
+      "UpstreamHttpMethod": [ "GET", "POST" ],
+      "UseServiceDiscovery": true
+    },
+    {
+      "DownstreamPathTemplate": "/completeTransaction",
+      "DownstreamScheme": "http",
+      "DownstreamHttpMethod": "POST",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5071
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/completeTransaction",
+      "UpstreamHttpMethod": [ "GET", "POST" ],
+      "UseServiceDiscovery": true
     }
-  ]
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:5200"
+  }
 }
