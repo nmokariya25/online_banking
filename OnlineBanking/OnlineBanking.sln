@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FraudDetectionService", "Fr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API_Gateway", "API_Gateway\API_Gateway.csproj", "{EB4D1BFE-30F6-4889-8F27-8E383F5CD71C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQConsumerService", "RabbitMQConsumerService\RabbitMQConsumerService.csproj", "{A64A1A76-6BD5-4A83-A4DF-6DB995A48810}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{EB4D1BFE-30F6-4889-8F27-8E383F5CD71C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB4D1BFE-30F6-4889-8F27-8E383F5CD71C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB4D1BFE-30F6-4889-8F27-8E383F5CD71C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A64A1A76-6BD5-4A83-A4DF-6DB995A48810}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A64A1A76-6BD5-4A83-A4DF-6DB995A48810}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A64A1A76-6BD5-4A83-A4DF-6DB995A48810}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A64A1A76-6BD5-4A83-A4DF-6DB995A48810}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
