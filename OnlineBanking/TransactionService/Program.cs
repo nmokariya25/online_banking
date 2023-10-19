@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Polly;
 using TransactionService;
 using TransactionService.MQ;
 
@@ -12,6 +13,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<TransactionServiceDbContext>(x => x.UseSqlServer(builder.Configuration.GetConnectionString("TransactionServiceDB")));
 builder.Services.AddScoped<IRabitMQProducer, RabitMQProducer>();
+builder.Services.AddHttpClient("errorApi", c => { c.BaseAddress = new Uri("http://localhost:5071"); })
+            .AddTransientHttpErrorPolicy(p => p.CircuitBreakerAsync(2, TimeSpan.FromMinutes(2)));
 
 var app = builder.Build();
 

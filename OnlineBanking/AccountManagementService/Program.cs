@@ -1,6 +1,7 @@
 using AccountManagementService;
 using AccountManagementService.MQ;
 using Microsoft.EntityFrameworkCore;
+using Polly;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +13,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<AccountManagementServiceDbContext>(x => x.UseSqlServer(builder.Configuration.GetConnectionString("AccountManagementServiceDB")));
 builder.Services.AddScoped<IRabitMQProducer, RabitMQProducer>();
+builder.Services.AddHttpClient("errorApi", c => { c.BaseAddress = new Uri("http://localhost:5110"); })
+            .AddTransientHttpErrorPolicy(p => p.CircuitBreakerAsync(2, TimeSpan.FromMinutes(2)));
 
 var app = builder.Build();
 

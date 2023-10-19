@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using NotificationService;
+using Polly;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +11,8 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<NotificationServiceDbContext>(x => x.UseSqlServer(builder.Configuration.GetConnectionString("NotificationServiceDB")));
+builder.Services.AddHttpClient("errorApi", c => { c.BaseAddress = new Uri("http://localhost:5120"); })
+            .AddTransientHttpErrorPolicy(p => p.CircuitBreakerAsync(2, TimeSpan.FromMinutes(2)));
 
 
 var app = builder.Build();
