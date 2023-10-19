@@ -1,8 +1,8 @@
 ﻿using AccountManagementService.Enums;
 using AccountManagementService.Models;
-using AccountManagementService.MQ;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using RabbitMQServices.Interfaces;
 
 namespace AccountManagementService.Controllers
 {

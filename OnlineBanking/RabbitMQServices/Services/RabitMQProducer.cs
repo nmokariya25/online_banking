@@ -1,8 +1,13 @@
 ﻿using Newtonsoft.Json;
 using RabbitMQ.Client;
+using RabbitMQServices.Interfaces;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace FraudDetectionService.MQ
+namespace RabbitMQServices.Services
 {
     public class RabitMQProducer : IRabitMQProducer
     {

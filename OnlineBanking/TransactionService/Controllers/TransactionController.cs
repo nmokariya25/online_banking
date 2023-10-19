@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using RabbitMQServices.Interfaces;
 using TransactionService.Models;
-using TransactionService.MQ;
 
 namespace TransactionService.Controllers
 {

@@ -3,19 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccountManagementService", "AccountManagementService\AccountManagementService.csproj", "{D38A403B-B9CC-4B23-8435-E4529A7B9909}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AccountManagementService", "AccountManagementService\AccountManagementService.csproj", "{D38A403B-B9CC-4B23-8435-E4529A7B9909}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransactionService", "TransactionService\TransactionService.csproj", "{E9A5E0AF-FE69-4610-A48A-92DCBB6245FE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TransactionService", "TransactionService\TransactionService.csproj", "{E9A5E0AF-FE69-4610-A48A-92DCBB6245FE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotificationService", "NotificationService\NotificationService.csproj", "{570CB612-006E-406E-BB28-6C59CBFE2F04}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NotificationService", "NotificationService\NotificationService.csproj", "{570CB612-006E-406E-BB28-6C59CBFE2F04}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuditService", "AuditService\AuditService.csproj", "{1516126F-C6E4-40A0-80AF-3CE566F7CFE0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuditService", "AuditService\AuditService.csproj", "{1516126F-C6E4-40A0-80AF-3CE566F7CFE0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FraudDetectionService", "FraudDetectionService\FraudDetectionService.csproj", "{BD1EACC2-487C-4523-B56D-68DE9C482AB3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FraudDetectionService", "FraudDetectionService\FraudDetectionService.csproj", "{BD1EACC2-487C-4523-B56D-68DE9C482AB3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API_Gateway", "API_Gateway\API_Gateway.csproj", "{EB4D1BFE-30F6-4889-8F27-8E383F5CD71C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API_Gateway", "API_Gateway\API_Gateway.csproj", "{EB4D1BFE-30F6-4889-8F27-8E383F5CD71C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQConsumerService", "RabbitMQConsumerService\RabbitMQConsumerService.csproj", "{A64A1A76-6BD5-4A83-A4DF-6DB995A48810}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabbitMQConsumerService", "RabbitMQConsumerService\RabbitMQConsumerService.csproj", "{A64A1A76-6BD5-4A83-A4DF-6DB995A48810}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQServices", "RabbitMQServices\RabbitMQServices.csproj", "{AC41380D-416D-45A9-80AF-2A63EDD8F110}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{A64A1A76-6BD5-4A83-A4DF-6DB995A48810}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A64A1A76-6BD5-4A83-A4DF-6DB995A48810}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A64A1A76-6BD5-4A83-A4DF-6DB995A48810}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC41380D-416D-45A9-80AF-2A63EDD8F110}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC41380D-416D-45A9-80AF-2A63EDD8F110}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC41380D-416D-45A9-80AF-2A63EDD8F110}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC41380D-416D-45A9-80AF-2A63EDD8F110}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

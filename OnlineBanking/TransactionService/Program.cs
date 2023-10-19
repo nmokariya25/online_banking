@@ -1,7 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using Polly;
+using RabbitMQServices.Interfaces;
+using RabbitMQServices.Services;
 using TransactionService;
-using TransactionService.MQ;
 
 var builder = WebApplication.CreateBuilder(args);
 

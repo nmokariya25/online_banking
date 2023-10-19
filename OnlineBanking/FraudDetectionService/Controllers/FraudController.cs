@@ -1,5 +1,5 @@
-﻿using FraudDetectionService.MQ;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using RabbitMQServices.Interfaces;
 
 namespace FraudDetectionService.Controllers
 {

@@ -1,7 +1,8 @@
 using FraudDetectionService;
-using FraudDetectionService.MQ;
 using Microsoft.EntityFrameworkCore;
 using Polly;
+using RabbitMQServices.Interfaces;
+using RabbitMQServices.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 

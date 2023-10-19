@@ -1,7 +1,7 @@
 ﻿using AuditService.Models;
-using AuditService.MQ;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using RabbitMQServices.Interfaces;
 
 namespace AuditService.Controllers
 {
